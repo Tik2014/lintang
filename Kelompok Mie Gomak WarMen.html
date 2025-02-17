@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WarMen</title>
+    <style>
+        /* Resetting default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and general styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: #111;
+            padding: 20px 0;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header .logo h1 {
+            font-size: 32px;
+            font-family: 'Georgia', serif;
+            color: #F4C542;
+        }
+
+        header ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header ul li {
+            margin-left: 30px;
+        }
+
+        header ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+
+        /* Banner Section */
+        #banner {
+            background-image: url('banner.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        #banner .banner-content h2 {
+            font-size: 50px;
+            color: #F4C542;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background-color: #F4C542;
+            color: #000;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        /* Menu Section */
+        #menu {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        #menu h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #F4C542;
+        }
+
+        .menu-category {
+            margin-bottom: 40px;
+        }
+
+        .menu-category h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #F4C542;
+        }
+
+        .menu-items {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .menu-item img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .menu-item h4 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .pesan-button {
+            background-color: #F4C542;
+            color: #000;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .pesan-button:hover {
+            background-color: #d8b13c;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Flipbook Section */
+        #flipbook {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        /* Video Tutorial Section */
+        #tutorial {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .video-container iframe {
+            max-width: 100%;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #111;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        footer .social-media a {
+            text-decoration: none;
+            color: #F4C542;
+            margin: 0 10px;
+            font-size: 20px;
+        }
+
+        footer .social-media img {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>WarMen</h1>
+            </div>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#flipbook">Flipbook</a></li>
+                <li><a href="#tutorial">Tutorial</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <section id="banner">
+        <div class="banner-content">
+            <h2>Insyaallah Enak Warung Medan Orang Curug, Keturunan Medan</h2>
+            <a href="#menu" class="cta-button">Lihat Menu</a>
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu">
+        <h2>Menu Kami</h2>
+        <div class="menu-category">
+            <h3>Main Course</h3>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="https://cdn.idntimes.com/content-images/community/2022/01/272888722-966389294252868-3456635461937337482-n-6b8c15302cdbbf523d99da400760ed18-75b9702f234babb8975f59454942f8da.jpg" alt="Mie Gomak Goreng">
+                    <h4>Mie Gomak Goreng/Kuah</h4>
+                    <a href="#" class="pesan-button" onclick="showOrderMessage('Mie Gomak Goreng/Kuah')">Pesan Sekarang</a>
+                </div>
+                <div class="menu-item">
+                    <img src="https://public.urbanasia.com/images/post/2019/uploads/0f017e84d1df497381605bc1e95b64df.jpeg" alt="Mie Balap">
+                    <h4>Mie Balap</h4>
+                    <a href="#" class="pesan-button" onclick="showOrderMessage('Mie Balap')">Pesan Sekarang</a>
+                </div>
+                <div class="menu-item">
+                    <img src="https://img-global.cpcdn.com/recipes/11a3aa82dbce2303/680x482cq70/kari-bihun-medan-foto-resep-utama.jpg" alt="Kari Bihun Medan">
+                    <h4>Kari Bihun Medan</h4>
+                    <a href="#" class="pesan-button" onclick="showOrderMessage('Kari Bihun Medan')">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flipbook -->
+    <section id="flipbook">
+        <h2>Our Flipbook</h2>
+        <iframe src="https://heyzine.com/flip-book/9166c9e1a0.html" width="100%" height="600px" frameborder="0" allowfullscreen="true"></iframe>
+    </section>
+
+<!-- Tutorial Memasak -->
+<section id="tutorial">
+    <div class="tutorial-container" style="display: flex; justify-content: center; align-items: center;">
+        <video width="350" height="500" controls>
+            <source src="Whatsaap.mp4" type="video/mp4">
+            <source src="Whatsaap.mp4" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+        <!-- Teks Tutorial Memasak -->
+        <div class="tutorial-text" style="margin-left: 20px; font-size: 24px; color: #F4C542;">
+            <p>Tutorial Memasak Mie Gomak</p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>Alamat: Jl. Pelopor 2. Curug, Depok</p>
+        <p>Telepon: 0895-3849-23773</p>
+        <div class="social-media">
+            <!-- Instagram -->
+            <a href="https://instagram.com" target="ardianlsn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram">
+            </a>
+            <!-- Facebook -->
+            <a href="https://facebook.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            </a>
+            <!-- Twitter -->
+            <a href="https://twitter.com" target="_blank">
+                <img src="https://www.pngkey.com/png/full/2-27646_twitter-logo-png-transparent-background-logo-twitter-png.png" alt="Twitter">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Fungsi untuk menampilkan notifikasi saat pesanan diproses
+        function showOrderMessage(menuItem) {
+            alert("Pesanan " + menuItem + " sedang diproses. Terima kasih sudah memesan!");
+        }
+    </script>
+
+</body>
+</html>
